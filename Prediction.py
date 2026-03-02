@@ -224,7 +224,7 @@ def main():
     args = ap.parse_args()
 
     # Files
-    scaling_125 = os.path.join(args.model_dir, "scaling_params_108.pkl")
+    scaling_125 = os.path.join(args.model_dir, "scaling_params_1.pkl")
     scaling_228 = os.path.join(args.model_dir, "scaling_params.pkl")
 
     for p in [scaling_125, scaling_228]:
@@ -260,4 +260,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
