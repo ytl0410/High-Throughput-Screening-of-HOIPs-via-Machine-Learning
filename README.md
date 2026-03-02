@@ -22,4 +22,4 @@ To predict polymer viscosity using FNN and PINN models, save the dataframe conta
 
 ```
 python predict_from_cif.py /path/to/your_structure.cif --model-dir /path/to/models
-``
+```
