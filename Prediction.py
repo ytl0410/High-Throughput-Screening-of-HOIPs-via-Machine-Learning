@@ -79,9 +79,7 @@ def normalize_and_align(df_raw: pd.DataFrame, scaling_params_path: str):
       df = df.dropna(axis=1)
       df_normalized = (df - df_min) / range_
       df_normalized = df_normalized.dropna(axis=1)
-      descriptors_df_noconstant = df_normalized.loc[:, (df_normalized != df_normalized.iloc[0]).any()]
-      descriptors_df_noconstant = descriptors_df_noconstant.dropna(axis=1, how='any')
-      df_new = descriptors_df_noconstant.copy(); df_new.columns=str
+      df_new = df_normalized.copy(); df_new.columns=str
       df_new = df_new.reindex(columns=columns)
     """
     scaling_params = joblib.load(scaling_params_path)
